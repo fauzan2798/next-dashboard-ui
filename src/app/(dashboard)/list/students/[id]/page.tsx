@@ -109,9 +109,7 @@ const SingleStudentPage = () => {
         </div>
         {/* Bottom */}
         <div className="bg-white mt-4 rounded-md p-4 h-[800px]">
-          <h1 className="text-xl font-semibold mb-4">
-            Teacher&apos;s Schedule
-          </h1>
+          <h1 className="text-xl font-semibold mb-4">Student Schedules</h1>
           <BigCalendar />
         </div>
       </div>
