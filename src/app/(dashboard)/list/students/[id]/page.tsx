@@ -1,5 +1,6 @@
 import Announcements from "@/components/Announcements";
 import BigCalendar from "@/components/BigCalendar";
+import FormModel from "@/components/FormModel";
 import Performance from "@/components/Performance";
 import Image from "next/image";
 import Link from "next/link";
@@ -23,7 +24,29 @@ const SingleStudentPage = () => {
               />
             </div>
             <div className="w-2/3 flex flex-col justify-between gap-4 ">
-              <h1 className="text-xl font-semibold">Cameron Moran</h1>
+              <div className="flex items-center gap-4">
+                <h1 className="text-xl font-semibold">Cameron Moran</h1>
+                <FormModel
+                  type="update"
+                  table="student"
+                  data={{
+                    id: 1,
+                    studentId: "1234567890",
+                    username: "John Doe",
+                    email: "john@doe.com",
+                    password: "password",
+                    firstName: "John",
+                    lastName: "Doe",
+                    bloodType: "A+",
+                    img: "https://images.pexels.com/photos/2888150/pexels-photo-2888150.jpeg?auto=compress&cs=tinysrgb&w=1200",
+                    phone: "1234567890",
+                    subjects: ["Math", "Geometry"],
+                    classes: ["1B", "2A", "3C"],
+                    address: "123 Main St, Anytown, USA",
+                    birthday: "1998-07-02",
+                  }}
+                />
+              </div>
               <p className="text-xs text-gray-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
@@ -119,19 +142,19 @@ const SingleStudentPage = () => {
           <h1 className="text-xl font-semibold">Shortcuts</h1>
           <div className="mt-4 flex flex-wrap gap-4 text-xs text-gray-500">
             <Link className="p-3 rounded-md bg-lamaSkyLight" href="/">
-              Student's Lessons
+              Student&apos;s Lessons
             </Link>
             <Link className="p-3 rounded-md bg-lamaPurpleLight" href="/">
-              Student's Teachers
+              Student&apos;s Teachers
             </Link>
             <Link className="p-3 rounded-md bg-pink-50" href="/">
-              Student's Exams
+              Student&apos;s Exams
             </Link>
             <Link className="p-3 rounded-md bg-lamaSkyLight" href="/">
-              Student's Assignments
+              Student&apos;s Assignments
             </Link>
             <Link className="p-3 rounded-md bg-lamaYellowLight" href="/">
-              Student's Results
+              Student&apos;s Results
             </Link>
           </div>
         </div>
